@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+*{
+    font-family: 'Space Mono', monospace;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+body{
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+}
+.logo-img{
+    margin: 0 auto;
+}
+
+.container{
+    background-color: white;
+    width: 800px;
+    margin: 0 auto;
+    padding: 1.5%;
+    gap: 2%;
+    display: flex;
+    border-radius: 10px;
+}
+/* LEFT LAYOUT */
+.left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.temp-div{
+    display: flex;
+    align-items: center;
+}
+.temp-div i{
+    position: absolute;
+}
+.icon {
+    padding: 10px;
+    min-width: 50px;
+    text-align: left;
+    color: rgb(158, 187, 189);
+}
+.number-input{
+    text-align: right;
+    background-color: hsl(180, 50%, 97%);
+    color: hsl(183, 100%, 15%);
+    border: transparent;
+    border-radius: 5px;
+    height: 2em;
+    width: 100%;
+    cursor: pointer;
+}
+.number-input:focus, .number-input:hover{
+    outline: none;
+    border: 2px solid hsl(185, 41%, 84%);
+}
+.number-input::placeholder{
+    text-align: right;
+}
+        /* To remove scroll up and down
+            arrow in input button 
+            First one for chrome
+            second for firefox  */
+        .number-input::-webkit-outer-spin-button,
+        .number-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .number-input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+.item1 { grid-area: a; }
+.item2 { grid-area: b; }
+.item3 { grid-area: c; }
+.item4 { grid-area: d; }
+.item5 { grid-area: e; }
+.item6 { grid-area: f; }
+
+.tip{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+    'a b c'
+    'd e f';
+    gap: .5em;
+}
+.tip-button{
+    border: none;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    height: 2.5em;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+}
+.tip-button:hover{
+    background-color: rgba(159,232,223,255);
+    color: black;
+    font-weight: 900;
+}
+.tip-button:focus{
+    background-color: hsl(171, 68%, 46%);
+    color: black;
+    font-weight: 900;
+}
+.custom-input{
+    border-radius: 5px;
+    border: transparent;
+    background-color: hsl(180, 50%, 97%);
+    text-align: center;
+}
+.custom-input:focus, .custom-input:hover{
+    outline: none;
+    border: 2px solid hsl(185, 41%, 84%);
+    cursor: pointer;
+}
+
+        .custom-input::-webkit-outer-spin-button,
+        .custom-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .custom-input[type=number] {
+            -moz-appearance: textfield;
+        }
+.left-text-flex{
+    display: flex;
+    justify-content: space-between;
+}
+#not-zero{
+    color: red;
+    margin-bottom: .2em;
+    font-size: .7em;
+}
+
+
+/* RIGHT LAYOUT */
+.right{
+    width: 50%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    padding: 3% 3%;
+    justify-content: space-between;
+    gap: 50px;
+}
+.right-flex{
+    display: flex;
+    flex-direction: column;
+}
+.tip-amount, .tip-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+}
+.reset-button{
+    width: 100%;
+    border-radius: 5px;
+    border: transparent;
+    cursor: pointer;
+    background-color: hsl(183, 79%, 24%);
+    height: 2.5em;
+    font-weight: 700;
+    color: hsl(184, 85%, 22%);
+}
+.reset-button:hover{
+    background-color: rgba(159,232,223,255);
+}
+
+/* LEFT TYPOGRAPHY */
+.left-text{
+    margin-bottom: .2em;
+    color: hsl(184, 14%, 56%);
+    font-size: .7em;
+}
+
+
+/* RIGHT TYPOGRAPHY */
+.right-text{
+    color: white;
+    font-size: .7em;
+}
+.person-up{
+    margin-bottom: 0;
+}
+.person-down{
+    margin-top: 0;
+    color: hsl(184, 14%, 56%);
+    font-size: .6em;
+}
+.amount-result{
+    font-size: 2em;
+    color: hsl(171, 68%, 46%);
+}
+
+
+@media(max-width:500px){
+    .container{
+        flex-direction: column;
+        width: 90%;
+    }
+    .left, .right{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .tip{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+        'a b'
+        'c d'
+        'e f'; 
+    }
+    .people{
+        margin-bottom: 1em;
+    }
+
+    .right{
+        padding: 4% 5%;
+        gap: 10px;
+    }
+}
