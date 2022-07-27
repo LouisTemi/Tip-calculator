@@ -115,6 +115,7 @@ body{
     background-color: hsl(171, 68%, 46%);
     color: black;
     font-weight: 900;
+    outline: none;
 }
 .custom-input{
     border-radius: 5px;
